@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seedrandom Multiplication Quiz</title>
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: grid;
+      place-items: center; /* This centers content both vertically and horizontally */
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      gap: 20px; /* Adds space between the sections */
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Multiplication Quiz</h1>
+    <div id="menu">
+      <div>
+        <label for="seed">Seed</label>
+        <input type="text" id="seed" value="hello">
+      </div>
+
+      <div>
+        <label for="questions">Number of questions</label>
+        <input type="number" name="" id="questions" value="3">
+      </div>
+
+      <button id="startQuiz">Start Quiz</button>
+    </div>
+
+    <div id="input" style="display: none;">
+      <div id="timer">Time: 0:00.0</div>
+      <!-- div to display question -->
+      <div id="question"></div>
+      <!-- input for answer -->
+      <input type="text" id="answer">
+      <!-- button to submit answer -->
+      <button id="submitAnswer">Submit Answer</button>
+    </div>
+
+    <!-- div to display result -->
+    <ul id="result"></ul>
+
+    <!-- div to display score -->
+    <div id="score"></div>
+  </div>
+
+  <!-- script -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+  </script>
+  <script src="seed.js"></script>
+</body>
+</html>
